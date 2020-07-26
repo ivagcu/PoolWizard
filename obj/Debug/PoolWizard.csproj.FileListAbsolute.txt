@@ -1,0 +1,10 @@
+C:\Users\PC\source\repos\PoolWizard\PoolWizard\bin\Debug\PoolWizard.exe.config
+C:\Users\PC\source\repos\PoolWizard\PoolWizard\bin\Debug\PoolWizard.exe
+C:\Users\PC\source\repos\PoolWizard\PoolWizard\bin\Debug\PoolWizard.pdb
+C:\Users\PC\source\repos\PoolWizard\PoolWizard\obj\Debug\PoolWizard.csprojAssemblyReference.cache
+C:\Users\PC\source\repos\PoolWizard\PoolWizard\obj\Debug\PoolWizard.PoolWizardX.resources
+C:\Users\PC\source\repos\PoolWizard\PoolWizard\obj\Debug\PoolWizard.Properties.Resources.resources
+C:\Users\PC\source\repos\PoolWizard\PoolWizard\obj\Debug\PoolWizard.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\PoolWizard\PoolWizard\obj\Debug\PoolWizard.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\PoolWizard\PoolWizard\obj\Debug\PoolWizard.exe
+C:\Users\PC\source\repos\PoolWizard\PoolWizard\obj\Debug\PoolWizard.pdb
