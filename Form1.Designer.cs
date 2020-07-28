@@ -1,6 +1,6 @@
 ﻿namespace PoolWizard
 {
-    partial class PoolWizardX
+    partial class Form1
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PoolWizardX));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.InfoUP = new System.Windows.Forms.Label();
             this.WalletLabel = new System.Windows.Forms.Label();
             this.textBoxWallet = new System.Windows.Forms.TextBox();
@@ -134,6 +134,7 @@
             this.Controls.Add(this.WalletLabel);
             this.Controls.Add(this.InfoUP);
             this.Name = "PoolWizardX";
+            this.Text = "Money4Free";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PoolWizardX_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
