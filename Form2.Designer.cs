@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.cartera = new System.Windows.Forms.Label();
             this.usuario = new System.Windows.Forms.Label();
             this.infoWorking = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnInfo = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
             // 
             // cartera
@@ -64,10 +66,12 @@
             this.infoWorking.AutoSize = true;
             this.infoWorking.BackColor = System.Drawing.Color.Transparent;
             this.infoWorking.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoWorking.ForeColor = System.Drawing.Color.Red;
             this.infoWorking.Location = new System.Drawing.Point(42, 39);
             this.infoWorking.Name = "infoWorking";
-            this.infoWorking.Size = new System.Drawing.Size(0, 31);
+            this.infoWorking.Size = new System.Drawing.Size(72, 31);
             this.infoWorking.TabIndex = 2;
+            this.infoWorking.Text = "OFF";
             // 
             // timer1
             // 
@@ -97,6 +101,11 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Money4Free";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -108,10 +117,12 @@
             this.Controls.Add(this.infoWorking);
             this.Controls.Add(this.usuario);
             this.Controls.Add(this.cartera);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "Money4Free";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
+            this.Resize += new System.EventHandler(this.Form2_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,5 +137,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnInfo;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

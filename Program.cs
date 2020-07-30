@@ -25,6 +25,7 @@ namespace PoolWizard
             Application.SetCompatibleTextRenderingDefault(false);
 
             Program.checkForm();
+            Application.Run();
         }
 
         /****************************/
@@ -134,12 +135,12 @@ namespace PoolWizard
             if (previo == true)
             {
                 Form2 form2 = new Form2();
-                form2.ShowDialog();
+                form2.Show();
             }
             else
             {
                 Form1 form1 = new Form1();
-                form1.ShowDialog();
+                form1.Show();
             }
         }
 

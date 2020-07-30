@@ -120,7 +120,7 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "PoolWizardX";
             // 
-            // PoolWizardX
+            // Form1
             // 
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -133,7 +133,8 @@
             this.Controls.Add(this.textBoxWallet);
             this.Controls.Add(this.WalletLabel);
             this.Controls.Add(this.InfoUP);
-            this.Name = "PoolWizardX";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Form1";
             this.Text = "Money4Free";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PoolWizardX_FormClosing);
             this.ResumeLayout(false);

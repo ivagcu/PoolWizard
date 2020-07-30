@@ -11,7 +11,6 @@ C:\Users\PC\source\repos\PoolWizard\PoolWizard\obj\Debug\PoolWizard.pdb
 C:\Users\PC\Source\Repos\PoolWizard\bin\Debug\PoolWizard.exe.config
 C:\Users\PC\Source\Repos\PoolWizard\bin\Debug\PoolWizard.exe
 C:\Users\PC\Source\Repos\PoolWizard\bin\Debug\PoolWizard.pdb
-C:\Users\PC\Source\Repos\PoolWizard\obj\Debug\PoolWizard.csprojAssemblyReference.cache
 C:\Users\PC\Source\Repos\PoolWizard\obj\Debug\PoolWizard.Properties.Resources.resources
 C:\Users\PC\Source\Repos\PoolWizard\obj\Debug\PoolWizard.csproj.GenerateResource.cache
 C:\Users\PC\Source\Repos\PoolWizard\obj\Debug\PoolWizard.csproj.CoreCompileInputs.cache

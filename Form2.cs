@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PoolWizard
@@ -21,6 +15,11 @@ namespace PoolWizard
         public Form2()
         {
             InitializeComponent();
+
+            this.notifyIcon1.ContextMenuStrip = new System.Windows.Forms.ContextMenuStrip();
+            this.notifyIcon1.ContextMenuStrip.Items.Add("Show", null, this.MenuShow_Click);
+            this.notifyIcon1.ContextMenuStrip.Items.Add("Hide", null, this.MenuHide_Click);
+            this.notifyIcon1.ContextMenuStrip.Items.Add("Exit", null, this.MenuExit_Click);
 
             string userName = Program.getComputerName();
             string bat = File.ReadAllText(@"C:\Users\" + userName + @"\Desktop\Minado\Monero\exe.bat");
@@ -37,7 +36,12 @@ namespace PoolWizard
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Program.formClosing();
+            //Program.formClosing();
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = true;
+                this.WindowState = FormWindowState.Minimized;
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -69,6 +73,38 @@ namespace PoolWizard
             Form1 form1 = new Form1();
             form1.ShowDialog();
             this.Close();
+        }
+
+        private void Form2_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.ShowInTaskbar = false;
+                notifyIcon1.Visible = true;
+                notifyIcon1.BalloonTipText = "Funcionando minimizado.";
+                notifyIcon1.BalloonTipTitle = "Estado";
+                notifyIcon1.ShowBalloonTip(500);
+            }
+        }
+
+        void MenuShow_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            this.ShowInTaskbar = true;
+            notifyIcon1.Visible = false;
+        }
+
+        void MenuHide_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+            this.ShowInTaskbar = false;
+            notifyIcon1.Visible = true;
+        }
+
+        void MenuExit_Click(object sender, EventArgs e)
+        {
+            Program.formClosing();
+            Environment.Exit(0);
         }
     }
 }
