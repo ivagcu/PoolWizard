@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -22,7 +23,7 @@ namespace PoolWizard
         public Form1()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            startCorner();
         }
 
         private void InfoUP_Click(object sender, EventArgs e){}
@@ -68,6 +69,14 @@ namespace PoolWizard
         private void PoolWizardX_FormClosing(object sender, FormClosingEventArgs e)
         {
             Program.formClosing();
+        }
+
+        // Genera la ventana en la izquieda inferior derecha
+        void startCorner()
+        {
+            Rectangle workingArea = Screen.GetWorkingArea(this);
+            this.Location = new Point(workingArea.Right - Size.Width + 10,
+                                      workingArea.Bottom - Size.Height + 10);
         }
     }
 }

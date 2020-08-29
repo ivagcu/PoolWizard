@@ -133,6 +133,7 @@
             this.Controls.Add(this.textBoxWallet);
             this.Controls.Add(this.WalletLabel);
             this.Controls.Add(this.InfoUP);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Money4Free";
